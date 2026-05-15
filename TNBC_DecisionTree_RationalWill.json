@@ -1,0 +1,3212 @@
+{
+  "$id": "1",
+  "ModelName": "Decision Tree",
+  "ProjectVersion": "5.0",
+  "AppName": "Rational Will",
+  "AppAssemblyFilePath": "C:\\Program Files\\SpiceLogic Inc\\Rational Will\\Rational Will.exe",
+  "AppAssemblyVersion": "6.1.20",
+  "LoadedProjectFilePath": "B:\\UNCC Sem III\\Decision Analysis\\Project_TBNC.DecisionTree",
+  "MainViewModelInstance": {
+    "$id": "2"
+  },
+  "DiagramViewModelInstance": {
+    "$id": "3",
+    "$type": "DecisionTreeAnalysis.AppComponent.ViewModels.DiagramTreeViewModel, DecisionTreeAnalysis.AppComponent",
+    "ValueNodeWidth": 179.87654320987664,
+    "NodeHorizontalSpacing": 30.0,
+    "NodeVerticalSpacing": 45.0,
+    "DiagramOverviewZoomFactor": 1.0,
+    "NodesViewModelList": [
+      {
+        "$id": "4",
+        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+        "IsRootNode": true,
+        "ChildNodes": [
+          {
+            "$id": "5",
+            "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ActionNodeDataModel, DecisionTreeAnalysis.ViewModels",
+            "OptionResultData": {
+              "$id": "6",
+              "ID": 2,
+              "Name": "Pembrolizumab + Chemo",
+              "ExpectedValue": "NaN"
+            },
+            "IsValueAttached": true,
+            "SingleObjectiveUiInstance": {
+              "$id": "7",
+              "Objective": {
+                "$id": "8",
+                "Id": 2,
+                "Name": "QALY",
+                "Children": [],
+                "TooltipDescription": "Quality Adjusted Life Year",
+                "ObjectiveWeight": 1.0,
+                "ObjectiveAttribute": {
+                  "$id": "9",
+                  "AttributeType": 7,
+                  "AttributeData": {
+                    "$id": "10",
+                    "$type": "SharedViews.ViewModels.Core.Attributes.EffectivenessAttribute, SharedViews.ViewModels",
+                    "Name": "QALY",
+                    "VariableInfo": {
+                      "$id": "11",
+                      "Variables": [
+                        {
+                          "$id": "12",
+                          "VariableName": "Utility",
+                          "ValueRange": {
+                            "$id": "13",
+                            "Maximum": 1.0,
+                            "Step": 0.01
+                          },
+                          "ShowSmiley": true,
+                          "UiInPercent": true
+                        },
+                        {
+                          "$id": "14",
+                          "VariableName": "Time",
+                          "ValueRange": {
+                            "$id": "15",
+                            "Maximum": 100.0,
+                            "Minimum": 1.0,
+                            "Step": 1.0
+                          },
+                          "DefaultValue": 1.0,
+                          "Unit": "Years"
+                        }
+                      ],
+                      "FormulaType": 3,
+                      "CustomExpression": ""
+                    },
+                    "ValueRange": {
+                      "$id": "16"
+                    },
+                    "Unit": "QALY",
+                    "UseInterestRate": true,
+                    "NominalInterestRate": 0.03,
+                    "CompoundingPeriodUnit": 5,
+                    "KForDaly": "NaN",
+                    "BetaForDaly": "NaN",
+                    "ConstantForDaly": "NaN"
+                  },
+                  "HasDiscountedValue": true,
+                  "EffectivenessData": {
+                    "$ref": "10"
+                  }
+                },
+                "ObjectiveRange": "0 to 0"
+              },
+              "AttributeTypeValueBase": {
+                "$id": "17",
+                "TableExpressionList": [],
+                "VariableValues": [
+                  {
+                    "$id": "18",
+                    "Variable": {
+                      "$ref": "12"
+                    }
+                  },
+                  {
+                    "$id": "19",
+                    "Variable": {
+                      "$ref": "14"
+                    },
+                    "VariableValue": 1.0
+                  }
+                ]
+              },
+              "CashFlowDate": "2026-04-08T17:10:57.5509351Z",
+              "TimePeriod": 5
+            },
+            "ObjectiveValueList": [
+              {
+                "$ref": "7"
+              },
+              {
+                "$id": "20",
+                "Objective": {
+                  "$id": "21",
+                  "Id": 5,
+                  "Name": "Cost",
+                  "Children": [],
+                  "ObjectiveGoal": 1,
+                  "TooltipDescription": "Cost",
+                  "ObjectiveWeight": 1.0,
+                  "ObjectiveAttribute": {
+                    "$id": "22",
+                    "AttributeType": 6,
+                    "AttributeData": {
+                      "$id": "23",
+                      "$type": "SharedViews.ViewModels.Core.Attributes.CostAttribute, SharedViews.ViewModels",
+                      "ValueRange": {
+                        "$id": "24",
+                        "Maximum": 5000000.0,
+                        "Step": 50000.0
+                      },
+                      "MaxWillingToPayPerEffectiveness": 150000.0,
+                      "VariableInfo": {
+                        "$id": "25",
+                        "Variables": [],
+                        "CustomExpression": ""
+                      },
+                      "Unit": "$",
+                      "UseInterestRate": true,
+                      "NominalInterestRate": 0.03,
+                      "CompoundingPeriodUnit": 5
+                    },
+                    "HasDiscountedValue": true,
+                    "CostData": {
+                      "$ref": "23"
+                    }
+                  },
+                  "ObjectiveRange": "0 to 50,00,000"
+                },
+                "AttributeTypeValueBase": {
+                  "$id": "26",
+                  "TableExpressionList": [
+                    {
+                      "$id": "27",
+                      "Condition": "23673"
+                    }
+                  ],
+                  "VariableValues": [],
+                  "RealValue": 23673.0
+                },
+                "CashFlowDate": "2026-04-08T17:10:57.5526754Z",
+                "TimePeriod": 5
+              }
+            ],
+            "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+            "ParentId": 1,
+            "ChildNodes": [
+              {
+                "$id": "28",
+                "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovChanceNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                "MarkovSettings": {
+                  "$id": "29",
+                  "MaxIterationForCohortSimulationSliderValue": 1,
+                  "MaxNumberOfTransition": 2652,
+                  "DoNotChangeForStateProbabilities": true,
+                  "ConvergenceProbabilityEpsilon": 0.0001,
+                  "DoNotChangeForStateUtilities": true,
+                  "ConvergencePayoffEpsilon": 0.01,
+                  "ConvergenceConditionJoinType": "And",
+                  "StateTransitionDuration": 1,
+                  "StateTransitionUnit": 1,
+                  "ApplyHalfCycleCorrection": true,
+                  "CycleName": "Week",
+                  "CycleNameString": "Week",
+                  "UseCustomCycleName": true
+                },
+                "KnowTheProbabilitiesChecked": true,
+                "EventList": [
+                  {
+                    "$id": "30",
+                    "Name": "Event_Free_ON",
+                    "EventColor": "#FF52BDB4",
+                    "ProbabilitySliderValue": 100.0,
+                    "ScaledValue": 100.0
+                  },
+                  {
+                    "$id": "31",
+                    "Name": "Event_Free_OFF",
+                    "EventColor": "#FF008080"
+                  },
+                  {
+                    "$id": "32",
+                    "Name": "Locoregional_Recurrence",
+                    "EventColor": "#FFA781DD"
+                  },
+                  {
+                    "$id": "33",
+                    "Name": "Distant_Metastasis",
+                    "EventColor": "#FFFF8749"
+                  },
+                  {
+                    "$id": "34",
+                    "Name": "Death",
+                    "EventColor": "#FF81954D"
+                  }
+                ],
+                "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                "ParentId": 2,
+                "ChildNodes": [
+                  {
+                    "$id": "35",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "EventModel": {
+                      "$ref": "30"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "36",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "37",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "38",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01608
+                          },
+                          {
+                            "$id": "39",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:32:39.1914244Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "36"
+                      },
+                      {
+                        "$id": "40",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "41",
+                          "TableExpressionList": [
+                            {
+                              "$id": "42",
+                              "Condition": "20.7"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 20.7
+                        },
+                        "CashFlowDate": "2026-04-08T01:32:39.2070093Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 4,
+                    "ChildNodes": [
+                      {
+                        "$id": "43",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 5,
+                        "TransitionProbability": {
+                          "$id": "44",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "45",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "46",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "47",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "48",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "RatePerTimeUnitValue": 0.001076,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 5,
+                        "ChildNodes": [],
+                        "NodeId": 10,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "49",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 6,
+                        "TransitionProbability": {
+                          "$id": "50",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "51",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "52",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "53",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "54",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 5,
+                        "ChildNodes": [],
+                        "NodeId": 11,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "55",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 7,
+                        "TransitionProbability": {
+                          "$id": "56",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "57",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "58",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "59",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "60",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000215,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 5,
+                        "ChildNodes": [],
+                        "NodeId": 12,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "61",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 8,
+                        "TransitionProbability": {
+                          "$id": "62",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "63",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "64",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "65",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "66",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000538,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 5,
+                        "ChildNodes": [],
+                        "NodeId": 13,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "67",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 9,
+                        "TransitionProbability": {
+                          "$id": "68",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "69",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "70",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "71",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "72",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000323,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 5,
+                        "ChildNodes": [],
+                        "NodeId": 14,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 5,
+                    "Title": "Event_Free_ON",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "73",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 1,
+                    "EventModel": {
+                      "$ref": "31"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "74",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "75",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "76",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01619
+                          },
+                          {
+                            "$id": "77",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:34:08.0156164Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "74"
+                      },
+                      {
+                        "$id": "78",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "79",
+                          "TableExpressionList": [
+                            {
+                              "$id": "80",
+                              "Condition": "20.7"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 20.7
+                        },
+                        "CashFlowDate": "2026-04-08T01:34:08.0166235Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 4,
+                    "ChildNodes": [
+                      {
+                        "$id": "81",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 5,
+                        "TransitionProbability": {
+                          "$id": "82",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "83",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "84",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "85",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "86",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 6,
+                        "ChildNodes": [],
+                        "NodeId": 15,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "87",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 6,
+                        "TransitionProbability": {
+                          "$id": "88",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "89",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "90",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "91",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "92",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "RatePerTimeUnitValue": 0.001076,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 6,
+                        "ChildNodes": [],
+                        "NodeId": 16,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "93",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 7,
+                        "TransitionProbability": {
+                          "$id": "94",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "95",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "96",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "97",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "98",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000215,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 6,
+                        "ChildNodes": [],
+                        "NodeId": 17,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "99",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 8,
+                        "TransitionProbability": {
+                          "$id": "100",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "101",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "102",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "103",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "104",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000538,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 6,
+                        "ChildNodes": [],
+                        "NodeId": 18,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "105",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 9,
+                        "TransitionProbability": {
+                          "$id": "106",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "107",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "108",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "109",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "110",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.000323,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 6,
+                        "ChildNodes": [],
+                        "NodeId": 19,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 6,
+                    "Title": "Event_Free_OFF",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "111",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 2,
+                    "EventModel": {
+                      "$ref": "32"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "112",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "113",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "114",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01477
+                          },
+                          {
+                            "$id": "115",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:35:03.1083084Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "112"
+                      },
+                      {
+                        "$id": "116",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "117",
+                          "TableExpressionList": [
+                            {
+                              "$id": "118",
+                              "Condition": "69.3"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 69.3
+                        },
+                        "CashFlowDate": "2026-04-08T01:35:03.1083084Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 4,
+                    "ChildNodes": [
+                      {
+                        "$id": "119",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 5,
+                        "TransitionProbability": {
+                          "$id": "120",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 7,
+                        "ChildNodes": [],
+                        "NodeId": 20,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "121",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 6,
+                        "TransitionProbability": {
+                          "$id": "122",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 7,
+                        "ChildNodes": [],
+                        "NodeId": 21,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "123",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 7,
+                        "TransitionProbability": {
+                          "$id": "124",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 98.67,
+                          "ScaledValue": 98.67
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 7,
+                        "ChildNodes": [],
+                        "NodeId": 22,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "125",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 8,
+                        "TransitionProbability": {
+                          "$id": "126",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 1.197,
+                          "ScaledValue": 1.197
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 7,
+                        "ChildNodes": [],
+                        "NodeId": 23,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "127",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 9,
+                        "TransitionProbability": {
+                          "$id": "128",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 0.133,
+                          "ScaledValue": 0.133
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 7,
+                        "ChildNodes": [],
+                        "NodeId": 24,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 7,
+                    "Title": "Locoregional_Recurrence",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "129",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 3,
+                    "EventModel": {
+                      "$ref": "33"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "130",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "131",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "132",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01229
+                          },
+                          {
+                            "$id": "133",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:35:28.8354365Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "130"
+                      },
+                      {
+                        "$id": "134",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "135",
+                          "TableExpressionList": [
+                            {
+                              "$id": "136",
+                              "Condition": "294.6"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 294.6
+                        },
+                        "CashFlowDate": "2026-04-08T01:35:28.8354365Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 4,
+                    "ChildNodes": [
+                      {
+                        "$id": "137",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 5,
+                        "TransitionProbability": {
+                          "$id": "138",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 8,
+                        "ChildNodes": [],
+                        "NodeId": 25,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "139",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 6,
+                        "TransitionProbability": {
+                          "$id": "140",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 8,
+                        "ChildNodes": [],
+                        "NodeId": 26,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "141",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 7,
+                        "TransitionProbability": {
+                          "$id": "142",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 8,
+                        "ChildNodes": [],
+                        "NodeId": 27,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "143",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 8,
+                        "TransitionProbability": {
+                          "$id": "144",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 98.08,
+                          "ScaledValue": 98.08
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 8,
+                        "ChildNodes": [],
+                        "NodeId": 28,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "145",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 9,
+                        "TransitionProbability": {
+                          "$id": "146",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 1.92,
+                          "ScaledValue": 1.92
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 8,
+                        "ChildNodes": [],
+                        "NodeId": 29,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 8,
+                    "Title": "Distant_Metastasis",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "147",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 4,
+                    "EventModel": {
+                      "$ref": "34"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "148",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "149",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "150",
+                            "Variable": {
+                              "$ref": "12"
+                            }
+                          },
+                          {
+                            "$id": "151",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:35:48.007709Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "148"
+                      },
+                      {
+                        "$id": "152",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "153",
+                          "TableExpressionList": [
+                            {
+                              "$id": "154",
+                              "Condition": "0"
+                            }
+                          ],
+                          "VariableValues": []
+                        },
+                        "CashFlowDate": "2026-04-08T01:35:48.007709Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 4,
+                    "ChildNodes": [
+                      {
+                        "$id": "155",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 5,
+                        "TransitionProbability": {
+                          "$id": "156",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 9,
+                        "ChildNodes": [],
+                        "NodeId": 30,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "157",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 6,
+                        "TransitionProbability": {
+                          "$id": "158",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 9,
+                        "ChildNodes": [],
+                        "NodeId": 31,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "159",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 7,
+                        "TransitionProbability": {
+                          "$id": "160",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 9,
+                        "ChildNodes": [],
+                        "NodeId": 32,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "161",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 8,
+                        "TransitionProbability": {
+                          "$id": "162",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 9,
+                        "ChildNodes": [],
+                        "NodeId": 33,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "163",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 9,
+                        "TransitionProbability": {
+                          "$id": "164",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 100.0,
+                          "ScaledValue": 100.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 9,
+                        "ChildNodes": [],
+                        "NodeId": 34,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 9,
+                    "Title": "Death",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  }
+                ],
+                "NodeId": 4,
+                "Title": "Markov 1",
+                "NodeType": 6,
+                "IsChildOfPlannedNodeTree": true,
+                "ShowTitleOnDiagram": true,
+                "IsExpectedValueVisible": true
+              }
+            ],
+            "NodeId": 2,
+            "Title": "Pembrolizumab + Chemo",
+            "NodeType": 4,
+            "IsChildOfPlannedNodeTree": true,
+            "ShowTitleOnDiagram": true,
+            "IsExpectedValueVisible": true
+          },
+          {
+            "$id": "165",
+            "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ActionNodeDataModel, DecisionTreeAnalysis.ViewModels",
+            "OrderNoInParent": 1,
+            "OptionResultData": {
+              "$id": "166",
+              "ID": 3,
+              "Name": "Chemo Alone",
+              "ExpectedValue": "NaN"
+            },
+            "IsValueAttached": true,
+            "SingleObjectiveUiInstance": {
+              "$id": "167",
+              "Objective": {
+                "$ref": "8"
+              },
+              "AttributeTypeValueBase": {
+                "$id": "168",
+                "TableExpressionList": [],
+                "VariableValues": [
+                  {
+                    "$id": "169",
+                    "Variable": {
+                      "$ref": "12"
+                    }
+                  },
+                  {
+                    "$id": "170",
+                    "Variable": {
+                      "$ref": "14"
+                    },
+                    "VariableValue": 1.0
+                  }
+                ]
+              },
+              "CashFlowDate": "2026-04-08T17:15:20.9028254Z",
+              "TimePeriod": 5
+            },
+            "ObjectiveValueList": [
+              {
+                "$ref": "167"
+              },
+              {
+                "$id": "171",
+                "Objective": {
+                  "$ref": "21"
+                },
+                "AttributeTypeValueBase": {
+                  "$id": "172",
+                  "TableExpressionList": [
+                    {
+                      "$id": "173",
+                      "Condition": "3668"
+                    }
+                  ],
+                  "VariableValues": [],
+                  "RealValue": 3668.0
+                },
+                "CashFlowDate": "2026-04-08T17:15:20.9028254Z",
+                "TimePeriod": 5
+              }
+            ],
+            "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+            "ParentId": 1,
+            "ChildNodes": [
+              {
+                "$id": "174",
+                "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovChanceNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                "MarkovSettings": {
+                  "$id": "175",
+                  "MaxIterationForCohortSimulationSliderValue": 1,
+                  "MaxNumberOfTransition": 2652,
+                  "DoNotChangeForStateProbabilities": true,
+                  "ConvergenceProbabilityEpsilon": 0.0001,
+                  "DoNotChangeForStateUtilities": true,
+                  "ConvergencePayoffEpsilon": 0.01,
+                  "ConvergenceConditionJoinType": "And",
+                  "StateTransitionDuration": 1,
+                  "StateTransitionUnit": 1,
+                  "ApplyHalfCycleCorrection": true,
+                  "CycleName": "Week",
+                  "CycleNameString": "Week",
+                  "UseCustomCycleName": true
+                },
+                "KnowTheProbabilitiesChecked": true,
+                "EventList": [
+                  {
+                    "$id": "176",
+                    "Name": "Event_Free_ON",
+                    "EventColor": "#FF008080",
+                    "ProbabilitySliderValue": 100.0,
+                    "ScaledValue": 100.0
+                  },
+                  {
+                    "$id": "177",
+                    "Name": "Event_Free_OFF",
+                    "EventColor": "#FFA781DD"
+                  },
+                  {
+                    "$id": "178",
+                    "Name": "Locoregional_Recurrence",
+                    "EventColor": "#FFFF8749"
+                  },
+                  {
+                    "$id": "179",
+                    "Name": "Distant_Metastasis",
+                    "EventColor": "#FF81954D"
+                  },
+                  {
+                    "$id": "180",
+                    "Name": "Death",
+                    "EventColor": "#FFAECC9A"
+                  }
+                ],
+                "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                "ParentId": 3,
+                "ChildNodes": [
+                  {
+                    "$id": "181",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "EventModel": {
+                      "$ref": "176"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "182",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "183",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "184",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01608
+                          },
+                          {
+                            "$id": "185",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:50:24.352269Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "182"
+                      },
+                      {
+                        "$id": "186",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "187",
+                          "TableExpressionList": [
+                            {
+                              "$id": "188",
+                              "Condition": "20.7"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 20.7
+                        },
+                        "CashFlowDate": "2026-04-08T01:50:24.3547945Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 35,
+                    "ChildNodes": [
+                      {
+                        "$id": "189",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 36,
+                        "TransitionProbability": {
+                          "$id": "190",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "191",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "192",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "193",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "194",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "RatePerTimeUnitValue": 0.001699,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 36,
+                        "ChildNodes": [],
+                        "NodeId": 41,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "195",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 37,
+                        "TransitionProbability": {
+                          "$id": "196",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "197",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "198",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "199",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "200",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 36,
+                        "ChildNodes": [],
+                        "NodeId": 42,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "201",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 38,
+                        "TransitionProbability": {
+                          "$id": "202",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "203",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "204",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "205",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "206",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00034,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 36,
+                        "ChildNodes": [],
+                        "NodeId": 43,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "207",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 39,
+                        "TransitionProbability": {
+                          "$id": "208",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "209",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "210",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "211",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "212",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00085,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 36,
+                        "ChildNodes": [],
+                        "NodeId": 44,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "213",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 40,
+                        "TransitionProbability": {
+                          "$id": "214",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "215",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "216",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "217",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "218",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00051,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 36,
+                        "ChildNodes": [],
+                        "NodeId": 45,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 36,
+                    "Title": "Event_Free_ON",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "219",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 1,
+                    "EventModel": {
+                      "$ref": "177"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "220",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "221",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "222",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01619
+                          },
+                          {
+                            "$id": "223",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:51:02.3058504Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "220"
+                      },
+                      {
+                        "$id": "224",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "225",
+                          "TableExpressionList": [
+                            {
+                              "$id": "226",
+                              "Condition": "20.7"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 20.7
+                        },
+                        "CashFlowDate": "2026-04-08T01:51:02.3058504Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 35,
+                    "ChildNodes": [
+                      {
+                        "$id": "227",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 36,
+                        "TransitionProbability": {
+                          "$id": "228",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "229",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "230",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "231",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "232",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 37,
+                        "ChildNodes": [],
+                        "NodeId": 46,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "233",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 37,
+                        "TransitionProbability": {
+                          "$id": "234",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "235",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "236",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "237",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "238",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "UseComplimentaryForExponentialFunction": true,
+                          "RatePerTimeUnitValue": 0.001699,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 37,
+                        "ChildNodes": [],
+                        "NodeId": 47,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "239",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 38,
+                        "TransitionProbability": {
+                          "$id": "240",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "241",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "242",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "243",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "244",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00034,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 37,
+                        "ChildNodes": [],
+                        "NodeId": 48,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "245",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 39,
+                        "TransitionProbability": {
+                          "$id": "246",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "247",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "248",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "249",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "250",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00085,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 37,
+                        "ChildNodes": [],
+                        "NodeId": 49,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "251",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 40,
+                        "TransitionProbability": {
+                          "$id": "252",
+                          "HasTimeVariantProbability": true,
+                          "TimeVariantProbabilityType": 2,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "253",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "254",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [
+                            {
+                              "$id": "255",
+                              "XValue": 1
+                            },
+                            {
+                              "$id": "256",
+                              "XValue": 2652,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "RatePerTimeUnitValue": 0.00051,
+                          "UseTimeVariantConnectorAnnotation": true,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 50.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 37,
+                        "ChildNodes": [],
+                        "NodeId": 50,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 37,
+                    "Title": "Event_Free_OFF",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "257",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 2,
+                    "EventModel": {
+                      "$ref": "178"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "258",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "259",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "260",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01477
+                          },
+                          {
+                            "$id": "261",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:51:48.8806789Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "258"
+                      },
+                      {
+                        "$id": "262",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "263",
+                          "TableExpressionList": [
+                            {
+                              "$id": "264",
+                              "Condition": "60.3"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 60.3
+                        },
+                        "CashFlowDate": "2026-04-08T01:51:48.8816767Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 35,
+                    "ChildNodes": [
+                      {
+                        "$id": "265",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 36,
+                        "TransitionProbability": {
+                          "$id": "266",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 38,
+                        "ChildNodes": [],
+                        "NodeId": 51,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "267",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 37,
+                        "TransitionProbability": {
+                          "$id": "268",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 38,
+                        "ChildNodes": [],
+                        "NodeId": 52,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "269",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 38,
+                        "TransitionProbability": {
+                          "$id": "270",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence",
+                          "ProbabilitySliderValue": 98.67,
+                          "ScaledValue": 98.67
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 38,
+                        "ChildNodes": [],
+                        "NodeId": 53,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "271",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 39,
+                        "TransitionProbability": {
+                          "$id": "272",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 1.197,
+                          "ScaledValue": 1.197
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 38,
+                        "ChildNodes": [],
+                        "NodeId": 54,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "273",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 40,
+                        "TransitionProbability": {
+                          "$id": "274",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 0.133,
+                          "ScaledValue": 0.133
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 38,
+                        "ChildNodes": [],
+                        "NodeId": 55,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 38,
+                    "Title": "Locoregional_Recurrence",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "275",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 3,
+                    "EventModel": {
+                      "$ref": "179"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "276",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "277",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "278",
+                            "Variable": {
+                              "$ref": "12"
+                            },
+                            "VariableValue": 0.01229
+                          },
+                          {
+                            "$id": "279",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:52:11.3116004Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "276"
+                      },
+                      {
+                        "$id": "280",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "281",
+                          "TableExpressionList": [
+                            {
+                              "$id": "282",
+                              "Condition": "269.3"
+                            }
+                          ],
+                          "VariableValues": [],
+                          "RealValue": 269.3
+                        },
+                        "CashFlowDate": "2026-04-08T01:52:11.3116004Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 35,
+                    "ChildNodes": [
+                      {
+                        "$id": "283",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 36,
+                        "TransitionProbability": {
+                          "$id": "284",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 39,
+                        "ChildNodes": [],
+                        "NodeId": 56,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "285",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 37,
+                        "TransitionProbability": {
+                          "$id": "286",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 39,
+                        "ChildNodes": [],
+                        "NodeId": 57,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "287",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 38,
+                        "TransitionProbability": {
+                          "$id": "288",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 39,
+                        "ChildNodes": [],
+                        "NodeId": 58,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "289",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 39,
+                        "TransitionProbability": {
+                          "$id": "290",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis",
+                          "ProbabilitySliderValue": 98.34,
+                          "ScaledValue": 98.34
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 39,
+                        "ChildNodes": [],
+                        "NodeId": 59,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "291",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 40,
+                        "TransitionProbability": {
+                          "$id": "292",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [
+                            {
+                              "$id": "293",
+                              "AllowVerticalDragging": true,
+                              "XValue": 1.0
+                            },
+                            {
+                              "$id": "294",
+                              "AllowVerticalDragging": true,
+                              "XValue": 2652.0,
+                              "YValue": 1.0
+                            }
+                          ],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 1.66,
+                          "ScaledValue": 1.66
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 39,
+                        "ChildNodes": [],
+                        "NodeId": 60,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 39,
+                    "Title": "Distant_Metastasis",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  },
+                  {
+                    "$id": "295",
+                    "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.MarkovStateNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                    "OrderNoInParent": 4,
+                    "EventModel": {
+                      "$ref": "180"
+                    },
+                    "ProbabilityHeader": "Initial Probability",
+                    "IsValueAttached": true,
+                    "SingleObjectiveUiInstance": {
+                      "$id": "296",
+                      "Objective": {
+                        "$ref": "8"
+                      },
+                      "AttributeTypeValueBase": {
+                        "$id": "297",
+                        "TableExpressionList": [],
+                        "VariableValues": [
+                          {
+                            "$id": "298",
+                            "Variable": {
+                              "$ref": "12"
+                            }
+                          },
+                          {
+                            "$id": "299",
+                            "Variable": {
+                              "$ref": "14"
+                            },
+                            "VariableValue": 1.0
+                          }
+                        ]
+                      },
+                      "CashFlowDate": "2026-04-08T01:52:27.7633315Z",
+                      "TimePeriod": 5
+                    },
+                    "ObjectiveValueList": [
+                      {
+                        "$ref": "296"
+                      },
+                      {
+                        "$id": "300",
+                        "Objective": {
+                          "$ref": "21"
+                        },
+                        "AttributeTypeValueBase": {
+                          "$id": "301",
+                          "TableExpressionList": [
+                            {
+                              "$id": "302",
+                              "Condition": "0"
+                            }
+                          ],
+                          "VariableValues": []
+                        },
+                        "CashFlowDate": "2026-04-08T01:52:27.7633315Z",
+                        "TimePeriod": 5
+                      }
+                    ],
+                    "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                    "ParentId": 35,
+                    "ChildNodes": [
+                      {
+                        "$id": "303",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "ReferencedNodeId": 36,
+                        "TransitionProbability": {
+                          "$id": "304",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_ON"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 40,
+                        "ChildNodes": [],
+                        "NodeId": 61,
+                        "Title": "Event_Free_ON",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "305",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 1,
+                        "ReferencedNodeId": 37,
+                        "TransitionProbability": {
+                          "$id": "306",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Event_Free_OFF"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 40,
+                        "ChildNodes": [],
+                        "NodeId": 62,
+                        "Title": "Event_Free_OFF",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "307",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 2,
+                        "ReferencedNodeId": 38,
+                        "TransitionProbability": {
+                          "$id": "308",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Locoregional_Recurrence"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 40,
+                        "ChildNodes": [],
+                        "NodeId": 63,
+                        "Title": "Locoregional_Recurrence",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "309",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 3,
+                        "ReferencedNodeId": 39,
+                        "TransitionProbability": {
+                          "$id": "310",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Distant_Metastasis"
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 40,
+                        "ChildNodes": [],
+                        "NodeId": 64,
+                        "Title": "Distant_Metastasis",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      },
+                      {
+                        "$id": "311",
+                        "$type": "DecisionTreeAnalysis.ViewModels.Models.NodeData.ReferencedNodeDataModel, DecisionTreeAnalysis.ViewModels",
+                        "OrderNoInParent": 4,
+                        "ReferencedNodeId": 40,
+                        "TransitionProbability": {
+                          "$id": "312",
+                          "HasConstantProbability": true,
+                          "CustomUtilityMapDataPoints": [],
+                          "LookupTableDataPoints": [],
+                          "RatePerTimeUnitValue": 0.1,
+                          "UnknownProbability": 0.2,
+                          "Name": "Death",
+                          "ProbabilitySliderValue": 100.0,
+                          "ScaledValue": 100.0
+                        },
+                        "ThisClassId": "15f53199-0433-4709-a7c7-5e04fdcc4eff",
+                        "ParentId": 40,
+                        "ChildNodes": [],
+                        "NodeId": 65,
+                        "Title": "Death",
+                        "NodeType": 9,
+                        "IsChildOfPlannedNodeTree": true,
+                        "ShowTitleOnDiagram": true,
+                        "IsExpectedValueVisible": true
+                      }
+                    ],
+                    "NodeId": 40,
+                    "Title": "Death",
+                    "NodeType": 7,
+                    "IsChildOfPlannedNodeTree": true,
+                    "ShowTitleOnDiagram": true,
+                    "IsExpectedValueVisible": true
+                  }
+                ],
+                "NodeId": 35,
+                "Title": "Markov 2",
+                "NodeType": 6,
+                "IsChildOfPlannedNodeTree": true,
+                "ShowTitleOnDiagram": true,
+                "IsExpectedValueVisible": true
+              }
+            ],
+            "NodeId": 3,
+            "Title": "Chemo Alone",
+            "NodeType": 4,
+            "IsChildOfPlannedNodeTree": true,
+            "ShowTitleOnDiagram": true,
+            "IsExpectedValueVisible": true
+          }
+        ],
+        "NodeId": 1,
+        "Title": "Decision 1",
+        "IsPlannedNode": true,
+        "ShowTitleOnDiagram": true,
+        "IsExpectedValueVisible": true
+      },
+      {
+        "$ref": "5"
+      },
+      {
+        "$ref": "165"
+      },
+      {
+        "$ref": "28"
+      },
+      {
+        "$ref": "35"
+      },
+      {
+        "$ref": "73"
+      },
+      {
+        "$ref": "111"
+      },
+      {
+        "$ref": "129"
+      },
+      {
+        "$ref": "147"
+      },
+      {
+        "$ref": "43"
+      },
+      {
+        "$ref": "49"
+      },
+      {
+        "$ref": "55"
+      },
+      {
+        "$ref": "61"
+      },
+      {
+        "$ref": "67"
+      },
+      {
+        "$ref": "81"
+      },
+      {
+        "$ref": "87"
+      },
+      {
+        "$ref": "93"
+      },
+      {
+        "$ref": "99"
+      },
+      {
+        "$ref": "105"
+      },
+      {
+        "$ref": "119"
+      },
+      {
+        "$ref": "121"
+      },
+      {
+        "$ref": "123"
+      },
+      {
+        "$ref": "125"
+      },
+      {
+        "$ref": "127"
+      },
+      {
+        "$ref": "137"
+      },
+      {
+        "$ref": "139"
+      },
+      {
+        "$ref": "141"
+      },
+      {
+        "$ref": "143"
+      },
+      {
+        "$ref": "145"
+      },
+      {
+        "$ref": "155"
+      },
+      {
+        "$ref": "157"
+      },
+      {
+        "$ref": "159"
+      },
+      {
+        "$ref": "161"
+      },
+      {
+        "$ref": "163"
+      },
+      {
+        "$ref": "174"
+      },
+      {
+        "$ref": "181"
+      },
+      {
+        "$ref": "219"
+      },
+      {
+        "$ref": "257"
+      },
+      {
+        "$ref": "275"
+      },
+      {
+        "$ref": "295"
+      },
+      {
+        "$ref": "189"
+      },
+      {
+        "$ref": "195"
+      },
+      {
+        "$ref": "201"
+      },
+      {
+        "$ref": "207"
+      },
+      {
+        "$ref": "213"
+      },
+      {
+        "$ref": "227"
+      },
+      {
+        "$ref": "233"
+      },
+      {
+        "$ref": "239"
+      },
+      {
+        "$ref": "245"
+      },
+      {
+        "$ref": "251"
+      },
+      {
+        "$ref": "265"
+      },
+      {
+        "$ref": "267"
+      },
+      {
+        "$ref": "269"
+      },
+      {
+        "$ref": "271"
+      },
+      {
+        "$ref": "273"
+      },
+      {
+        "$ref": "283"
+      },
+      {
+        "$ref": "285"
+      },
+      {
+        "$ref": "287"
+      },
+      {
+        "$ref": "289"
+      },
+      {
+        "$ref": "291"
+      },
+      {
+        "$ref": "303"
+      },
+      {
+        "$ref": "305"
+      },
+      {
+        "$ref": "307"
+      },
+      {
+        "$ref": "309"
+      },
+      {
+        "$ref": "311"
+      }
+    ],
+    "OptionResultDataList": [
+      {
+        "$ref": "6"
+      },
+      {
+        "$ref": "166"
+      }
+    ],
+    "IsExpectedValueVisible": true,
+    "IsNodeTitleVisible": true
+  },
+  "ObjectiveViewModelInstance": {
+    "$id": "313",
+    "AllUsedPairComparisonItems": [],
+    "BackupPairComparisonItems": [],
+    "ParentGroup": {},
+    "EvaluatedObjectiveList": [
+      {
+        "$ref": "8"
+      },
+      {
+        "$ref": "21"
+      }
+    ],
+    "PairComparisonList": [],
+    "WeightAssignmentList": [],
+    "CanChangeEnforceTransitivity": true,
+    "MultiCriteriaUtilityFunctionUnit": "Utils",
+    "MultiCriteriaUtilityFunctionName": "Value"
+  },
+  "ScalingFunctionMenuViewModelInstance": {
+    "$id": "314",
+    "$type": "DecisionTreeAnalysis.ViewModels.ViewModels.ScalingFunctionMenuViewModel, DecisionTreeAnalysis.ViewModels",
+    "SelectedValueDimension": 1,
+    "ValueDimensionList": []
+  },
+  "IsCostEffectivenessContext": true,
+  "OptionStrategyMenuViewModelInstance": {
+    "$id": "315",
+    "IsCostEffectivenessContext": true,
+    "ProbabilityToleranceSliderValue": 5.0,
+    "HurwiczParameter": {
+      "$id": "316",
+      "DeviationFromBestPayOffSliderValue": 20,
+      "DeviationFromWorstPayOffSliderValue": 20,
+      "DegreeOfOptimismSliderValue": 50
+    },
+    "SelectedDecisionCriterionName": 1,
+    "HasDecisionCriterionSelectionDisabled": true,
+    "DecisionCriterionDisabledTooltip": "When using Markov modeling, the decision criteria can be only maximizing Expected Utility",
+    "MonteSimulationData": {
+      "$id": "317",
+      "PreviousSelectedExecutionType": 2,
+      "SelectedExecutionType": 2,
+      "NumberOfBins": 12,
+      "NumberOfIteration": 1000
+    },
+    "IsMonteCarloExecutionTypeChangeAllowed": true
+  },
+  "GlobalPreferenceMenuViewModelInstance": {
+    "$id": "318",
+    "UnitOfUtility": "Utils"
+  },
+  "SharedViewModelInstance": {
+    "$id": "319",
+    "EffectivenessValueUnit": "QALY",
+    "CostValueUnit": "$",
+    "ValueUnit": "Utils"
+  },
+  "OptionsAnalyzerViewModelInstance": {
+    "$id": "320",
+    "SelectedMetrics": {
+      "CostEffectivenessRatio": false,
+      "ExpectedEffectiveness": false,
+      "ExpectedCost": false,
+      "Icer": false
+    },
+    "MetricsUncheckedByUser": {},
+    "ExpectedValueOfPerfectInformation": "NaN",
+    "DisplayableColumnList": [
+      {
+        "$id": "321",
+        "ColumnDisplayName": "CER",
+        "Description": "Cost-Effectiveness Ratio",
+        "CheckedByDefault": true,
+        "UseChart": true,
+        "Unit": "",
+        "CorrespondingPropertyName": "CostEffectivenessRatio",
+        "UseColorsToShowDisqualifySatisfyStatus": true
+      },
+      {
+        "$id": "322",
+        "ColumnDisplayName": "QALY",
+        "Description": "Expected QALY",
+        "CheckedByDefault": true,
+        "UseChart": true,
+        "Unit": "QALY",
+        "CorrespondingPropertyName": "ExpectedEffectiveness"
+      },
+      {
+        "$id": "323",
+        "ColumnDisplayName": "Costs",
+        "Description": "Expected Cost",
+        "CheckedByDefault": true,
+        "UseChart": true,
+        "Unit": "$",
+        "CorrespondingPropertyName": "ExpectedCost"
+      },
+      {
+        "$id": "324",
+        "ColumnDisplayName": "ICER",
+        "Description": "Incremental Cost Effectiveness Ratio",
+        "CheckedByDefault": true,
+        "Unit": "",
+        "CorrespondingPropertyName": "Icer"
+      },
+      {
+        "$id": "325",
+        "ColumnDisplayName": "NMB",
+        "Description": "Net Monetary Benefit",
+        "UseChart": true,
+        "Unit": "$",
+        "CorrespondingPropertyName": "NetMonetaryBenefit"
+      }
+    ],
+    "RangeChartList": [],
+    "IsRelativeToStatusQuoChecked": false
+  },
+  "SensitivityAnalyzerViewModelInstance": {
+    "$id": "326",
+    "BringSensitivityObjectToView": {
+      "$id": "327",
+      "$type": "DecisionTreeAnalysis.AppComponent.Infrastructure.BringSensitivityObjectToView, DecisionTreeAnalysis.AppComponent"
+    },
+    "IsConsiderObjectiveValues": true,
+    "IsConsiderProbabilities": true
+  },
+  "WizardViewModelInstance": {
+    "$id": "328"
+  },
+  "TestMLWizardViewModelInstance": {
+    "$id": "329"
+  },
+  "TestMLResultViewModelInstance": {
+    "$id": "330",
+    "SelectedMetrics": [],
+    "MetricsUncheckedByUser": [],
+    "PredictedClasses": [],
+    "TestResultPropertyList": [],
+    "TestResultPropertyDataList": []
+  },
+  "CostEffectivenessAttributeViewModelInstance": {
+    "$id": "331",
+    "MaxLifeTimeYears": 100,
+    "UseCostMinimization": true,
+    "CostMaximum": 5000000.0,
+    "EffectivenessMaximum": 100.0,
+    "CostBudgetPerEffectiveness": 150000.0,
+    "CostUnit": "$",
+    "EffectivenessName": "Life‐years",
+    "NominalInterestRateInPercent": 3.0,
+    "UseInterestRate": true,
+    "CompoundingPeriodUnit": 5,
+    "SelectedQualyFormula": {
+      "$id": "332",
+      "FormulaStr": "Utility x Time",
+      "FormulaType": 1
+    },
+    "SelectedDalyFormula": {
+      "$id": "333",
+      "FormulaStr": "Murray: f(∫ g(x, r, β, C, L) dx)",
+      "FormulaType": 1
+    },
+    "CustomVariables": [],
+    "IsWizardFinished": true,
+    "MaximumUtilityChecked": true,
+    "SelectedEffectivenessType": 2,
+    "ConstantForDaly": 0.1658,
+    "KForDaly": 1.0,
+    "BetaForDaly": 0.04
+  },
+  "IsThisProjectLoadedFromAFile": true,
+  "ProjectExtension": "DecisionTree",
+  "OpenFileDialogHeader": "Opening Decision Tree",
+  "SaveFileDialogHeader": "Saving Decision Tree",
+  "FileDialogFilter": "Decision Tree File (*.DecisionTree)|*.DecisionTree;",
+  "IsBusyInProcessing": true
+}
